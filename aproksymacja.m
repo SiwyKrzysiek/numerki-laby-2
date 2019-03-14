@@ -23,6 +23,8 @@ plot(X, Y, "-");
 
 legend("dane punkty", "aproksymacja");
 
+blad = bladSredniokwadratowy(x, y, @(x) polyval(wielomian, x))
+
 %% Test
 clc;
 
