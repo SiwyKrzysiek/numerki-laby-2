@@ -8,6 +8,7 @@ function wielomian = aproksymuj(x, y, stopienWyniku)
     for r = 1:stopienWyniku
        for k = 1:stopienWyniku
            if r == 1 && k == 1
+               X(r, k) = n;
                
            else
                potega = r-1 + k-1;
@@ -32,7 +33,7 @@ function wielomian = aproksymuj(x, y, stopienWyniku)
        Y(i) = suma;
     end
     
-    A = (X\Y)';
+    A = (X\Y)'
     
     wielomian = fliplr(A);
 end
