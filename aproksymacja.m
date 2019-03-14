@@ -1,4 +1,5 @@
 clc
+clf
 
 load("dane_apx0.mat");
 % s %Wypisanie danych
@@ -7,9 +8,7 @@ x = s(:, 1)';
 y = s(:, 2)';
 
 %Wykres wczytanych danych
-plot(x, y, ".");
-
-plot(x, y, "x");
+plot(x, y, "*");
 hold on;
 
 wielomian = aproksymuj(x, y, 3);
@@ -17,7 +16,7 @@ wielomian = aproksymuj(x, y, 3);
 a = min(x);
 b = max(x);
 
-X = linspace(a, b, 1000);
+X = linspace(a, b, 100);
 Y = arrayfun(@(x) polyval(wielomian, x), X);
 
 plot(X, Y, "-");
@@ -38,7 +37,7 @@ wielomian = aproksymuj(x, y, 3);
 a = min(x);
 b = max(x);
 
-X = linspace(a, b, 1000);
+X = linspace(a, b, 100);
 Y = arrayfun(@(x) polyval(wielomian, x), X);
 
 plot(X, Y, "-");
