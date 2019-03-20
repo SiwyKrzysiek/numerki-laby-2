@@ -1,7 +1,5 @@
 function wielomian = aproksymuj(x, y, stopienWyniku)
     n = length(x);
-
-    wielomian = [2 1 1];
     
     X = zeros(stopienWyniku);
     
@@ -67,7 +65,7 @@ function wielomian = aproksymuj(x, y, stopienWyniku)
        Y(i) = suma;
     end
     
-    A = (X\Y)'
+    A = (X\Y)';
     
     wielomian = fliplr(A);
 end
